@@ -1,14 +1,17 @@
 
-list = ['apple', 'juice', 'orange']
-copy = list
+s = input()
+count = 1
+b = ''
 
-del list[0]
+for i in range(0, len(s)):
+    if i != len(s)-1:
+        if s[i] == s[i + 1]:
+            count += 1
+        else:
+            b += s[i] + str(count)
+            count = 1
+    else:
+        b += s[i] + str(count)
+        break
 
-print(list)
-print(copy)
-
-copy = list[:]
-del copy[0]
-
-print(list)
-print(copy)
+print(b)
