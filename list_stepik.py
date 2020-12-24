@@ -1,5 +1,5 @@
-s = input()
-arr = s.split()
+# s = input()
+# arr = s.split()
 mas = []
 sum = 0
 
