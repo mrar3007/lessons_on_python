@@ -1,3 +1,37 @@
+d = {}
+arr = [i for i in input().lower().split()]
+
+
+
+'''
+for value in arr:
+    if d.get(value) == None:
+        d[value] = 1
+    else:
+        for key in d:
+            if value == key:
+                d[key] += 1
+
+for key, value in d.items():
+    print(key, value, end='\n')
+
+def update_dictionary(d, key, value):
+    if key in d:
+        d[key].append(value)
+    elif key * 2 in d:
+        d[key * 2].append(value)
+    else:
+        d[key * 2] = [value]
+
+d = {}
+update_dictionary(d, 1, -1)
+print(d)
+update_dictionary(d, 2, -2)
+print(d)
+update_dictionary(d, 1, -3)
+print(d)
+
+
 dict = {
     'Arkadiy': 179,
     'Igor': 178,
@@ -29,3 +63,4 @@ while True:
             print('У {0} рост {1}'.format(name, high))
 
 print('program complete')
+'''
