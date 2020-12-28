@@ -1,4 +1,5 @@
-from mymodule import sayHello, __version__
+s = input()
 
-sayHello()
-print(__version__)
+f = open('text.txt', 'w')
+
+f.write(s)

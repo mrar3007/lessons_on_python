@@ -1,9 +1,5 @@
+def
 
-def reverseMass(num):
-    mass = list(num)
-    mass.sort()
-    mass.reverse()
-    st = ''.join(mass)
-    return st
+n = 0
 
-print(reverseMass('5463214598'))
+print(isinstance(n, int))

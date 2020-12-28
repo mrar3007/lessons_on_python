@@ -1,9 +1,11 @@
-d = {}
-arr = [i for i in input().lower().split()]
-
+n = int(input())
+for i in range(n):
 
 
 '''
+d = {}
+arr = [i for i in input().lower().split()]
+
 for value in arr:
     if d.get(value) == None:
         d[value] = 1
