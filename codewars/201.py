@@ -15,3 +15,6 @@ print([1, 2, 'a', 'b'])'''
 
 print(longest("aretheyhere", "yestheyarehere"))
 '''
+'''def count_smileys(arr):
+    return sum([1 for i in arr if (i[0] == ':' or i[0] == ';') and (i[1] == i[len(i)-1] or i[1] == '~' or i[1] == '-') and (i[len(i)-1] == 'D' or i[len(i)-1] == ')')])
+print(count_smileys([';]', ':[', ';*', ':$', ';-D']))'''
