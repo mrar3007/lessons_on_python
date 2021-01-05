@@ -16,4 +16,20 @@
 
 print(ROT13('Hello'))'''
 
+'''def namelist(names):
+    s = ''
+    for i in names:
+        if len(names) == 1:
+            return i['name']
+        elif names.index(i) == len(names)-2:
+            j = names.index(i)
+            s += names[j]['name']
+            s += ' & ' + names[j+1]['name']
+            break
+        s += i['name'] + ', '
+    return s
+
+print(namelist([{'name': 'Bart'},{'name': 'Lisa'},{'name': 'Maggie'},{'name': 'Homer'},{'name': 'Marge'}]))'''
+
+
 
