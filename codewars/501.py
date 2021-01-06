@@ -31,5 +31,10 @@ print(ROT13('Hello'))'''
 
 print(namelist([{'name': 'Bart'},{'name': 'Lisa'},{'name': 'Maggie'},{'name': 'Homer'},{'name': 'Marge'}]))'''
 
+'''def open_or_senior(data):
+    return ["Senior" if i[0] > 54 and i[1] > 7 else "Open" for i in data]
+print(open_or_senior([[1, 1], [55, 8]]))'''
+
+
 
 
