@@ -15,17 +15,16 @@ def sum_pairs(ints, s):
     arr = [[ints[i], ints[j]] for i in range(len(ints)) for j in range(len(ints)) if ints[i] + ints[j] == s and i != j]
     return arr[-2] if len(arr) > 1 else arr[0] if len(arr) == 1 else None'''
 
-'''
-Версия google и немного моя)   
+'''Версия google и немного моя)   
         |||
-        VVV
+        VVV'''
 def sum_pairs(ints, s):
-    arr = []
+    arr = set()
     for i in ints:
         diff = s - i
         if diff in arr:
             return [diff, i]
-        arr.append(i)
+        arr.add(i)
 
 l1= [1, 4, 8, 7, 3, 15]
 l2= [1, -2, 3, 0, -6, 1]
@@ -43,6 +42,6 @@ print(sum_pairs(l4, 2))
 print(sum_pairs(l5, 10))
 print(sum_pairs(l6, 8))
 print(sum_pairs(l7, 0))
-print(sum_pairs(l8, 10))'''
+print(sum_pairs(l8, 10))
 
 
