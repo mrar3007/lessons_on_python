@@ -55,7 +55,7 @@ print(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))'''
 
 # 'years': 0, 'days': 0, 'hours': 0, 'minutes': 0,  'seconds': 0
 
-def format_duration(seconds):
+'''def format_duration(seconds):
     obj = {}
     num = seconds // 31536000
     if num > 0:
@@ -83,4 +83,32 @@ def format_duration(seconds):
     l = len(arr)
     return 'now' if l > 0 else ''.join([arr[i]+', ' if l >= 3 and i <= l-3 else arr[i]+' and ' if (l >= 3 and i == l-2) or (l == 2 and i == 0) else arr[i] for i in range(l)])
 
-print(format_duration(3601265))
+print(format_duration(3601265))'''
+'''
+def Fibanacci(n):
+    if n == 1:
+        return 1
+    elif n == 0:
+        return 0
+    return Fibanacci(n - 2) + Fibanacci(n - 1)'''
+
+'''def perimeter(n):
+    summa = 0
+    arr = []
+    for i in range(0, n+2):
+        if i == 0:
+            num = i
+            arr += [num]
+        elif i == 1:
+            num = i
+            arr += [num]
+        else:
+            num = arr[i-2]+arr[i-1]
+            arr += [num]
+        summa += num
+    return summa*4
+
+n = int(input())
+print(perimeter(n))'''
+
+
