@@ -22,7 +22,7 @@ print(solution("a #b\nc\nd $e f g", ["#", "$"]))
 print(solution('cherries\n^ = watermelons\n, bananas lemons watermelons strawberries\navocados oranges lemons', ['-', '=', ',', '!', '^', "'", '#']))
 '''
 
-def anagrams(word, words):
+'''def anagrams(word, words):
     arr = []
     obj = {}
     obj1 = {}
@@ -51,6 +51,36 @@ def anagrams(word, words):
         count = 0
     return arr
 
-print(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))
+print(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']))'''
 
+# 'years': 0, 'days': 0, 'hours': 0, 'minutes': 0,  'seconds': 0
 
+def format_duration(seconds):
+    obj = {}
+    num = seconds // 31536000
+    if num > 0:
+        key = 'years' if num >= 2 else 'year'
+        obj[key] = num
+        seconds -= obj[key]*31536000
+    num = seconds // 86400
+    if num > 0:
+        key = 'days' if num >= 2 else 'day'
+        obj[key] = num
+        seconds -= obj[key] * 86400
+    num = seconds // 3600
+    if num > 0:
+        key = 'hours' if num >= 2 else 'hour'
+        obj[key] = num
+        seconds -= obj[key] * 3600
+    num = seconds // 60
+    if num > 0:
+        key = 'minutes' if num >= 2 else 'minute'
+        obj[key] = num
+        seconds -= obj[key] * 60
+    key = 'seconds' if seconds >= 2 else 'second'
+    obj[key] = seconds
+    arr = [str(value) + ' ' + str(key) for key, value in obj.items() if value > 0]
+    l = len(arr)
+    return 'now' if l > 0 else ''.join([arr[i]+', ' if l >= 3 and i <= l-3 else arr[i]+' and ' if (l >= 3 and i == l-2) or (l == 2 and i == 0) else arr[i] for i in range(l)])
+
+print(format_duration(3601265))
