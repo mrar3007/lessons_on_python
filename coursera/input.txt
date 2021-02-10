@@ -1,10 +1,9 @@
-5
-Иванов Сергей 70 70 70
-Сергеев Петр 100 100 0
-Петров Василий 70 60 70
-Васильев Андрей 70 60 70
-Андреев Денис 100 30 100
-Денисов Роман 50 50 50
-Романов Иван 60 70 70
-Ким Чен Ир 50 50 50
-Ким Ир Сен 40 40 40
+hi
+hi
+what is your name
+my name is bond
+james bond
+my name is damme
+van damme
+claude van damme
+jean claude van damme
