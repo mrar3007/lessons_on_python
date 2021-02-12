@@ -1,14 +1,16 @@
 myDict = {}
 with open('input.txt', 'r', encoding='utf-8') as fin:
-    for i in fin.readlines():
-        for j in i.split():
-            myDict[j] = myDict.get(j, 0) + 1
-result = sorted(myDict.items(), key=lambda item: item[1], reverse=True)
-myDict = {i: [] for i in range(1, int(result[0][1]) + 1)}
-for i in result:
-    myDict[i[1]].append(i[0])
-result.clear()
-for item in myDict.values():
-    result += sorted(item, reverse=True)
-for i in range(len(result)-1, -1, -1):
-    print(result[i])
+    for line in fin.readlines():
+        arr = line.split()
+        if arr[0] not in myDict:
+            myDict[arr[0]] = {arr[1]: int(arr[2])}
+        elif arr[1] not in myDict[arr[0]]:
+            myDict[arr[0]].setdefault(arr[1], int(arr[2]))
+        else:
+            myDict[arr[0]][arr[1]] += int(arr[2])
+
+for item in sorted(myDict.items()):
+    print(item[0], end=':\n')
+    elem = sorted(dict(item[1]).items())
+    for value in elem:
+        print(value[0], value[1])
